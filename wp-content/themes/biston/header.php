@@ -25,4 +25,4 @@
     </div>
 	<!-- start container -->
 
-    <div><img src="images/hr_top.png" alt="" id="tophr" /></div>
+    <div><?php echo "<img src='".get_bloginfo("template_directory")."/images/hr_top.png' alt='' id='tophr' />";?></div>
