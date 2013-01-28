@@ -126,7 +126,7 @@ img.autoSizeImage{
 	width:735px;
 }
 
-#menu ul, #menu li {
+#menu ul li {
 	position:relative;
 	list-style:none;
 	display:inline;
@@ -140,10 +140,10 @@ img.autoSizeImage{
 		margin-right:0px;
 	}
 
-	#home { position:relative; float:left; background:url("file:///C|/xampp/htdocs/w2c/wp-content/themes/images/menu.png") 0px -41px; width:142px; height:28px; }
-	#home:hover { background-position: 0px -82px;}
-	#home:active { background-position: 0px -82px;}
-	#home.selected {background-position: 0px -82px;}
+	#menu ul li a { position:relative; float:left; background:url("images/menu.png") 0px -41px; width:142px; height:28px; }
+	#menu ul li a:hover { background-position: 0px -82px;}
+	#menu ul li a:active { background-position: 0px -82px;}
+	#menu ul li.current-menu-item{background-position: 0px -82px;}
 	
 	#about { position:relative; float:left; background:url("file:///C|/xampp/htdocs/w2c/wp-content/themes/images/menu.png") -146px -41px; width:142px; height:28px; }
 	#about:hover { background-position: -146px -82px; }
