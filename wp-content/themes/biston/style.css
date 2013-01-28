@@ -1,0 +1,858 @@
+/*
+Theme Name: Biston Wordpress Theme
+Theme URI:
+Author: 
+Author URI: 
+Description: 
+Version: 1
+License:
+License URI:
+Tags: two-columns, three-columns
+*/
+
+* {
+	margin:0;
+	padding:0;
+}
+
+body {
+	background-color:#333366;
+	color:#333;
+	font-family:Arial, Verdana, sans-serif;
+	font-size:12px;
+	margin:0;
+	padding:0;
+}
+
+
+h2 {
+	font-size:20px;
+}
+
+
+h3{
+	font-size:20px;
+	color:#ff6505;
+}
+
+
+h4 {
+	color:#006d78;
+	font-size:12px;
+	font-weight:bold;
+}
+
+h5 {
+	color:#ebb750;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+}
+
+img {
+	border:0;
+	margin:0;
+	padding:0;
+}
+
+.clear {
+	clear:both;
+	height:0;
+	overflow:hidden;
+	width:100%;
+}
+
+.left {
+	float:left;
+}
+
+.right {
+	float:right;
+}
+
+
+p{
+	line-height: 14px;
+	margin-top:10px;
+	text-align:justify;	
+}
+	
+	p:first-child{
+		margin-top:10px;
+	}
+
+
+a, a:visited{
+ color:#486e72;
+ text-decoration:none;
+}
+	a:hover{
+		text-decoration:underline;
+		color:#ff6505;
+	}
+	
+
+
+img.autoSizeImage{
+	max-width:100%;
+	max-height:100%;
+}
+
+/*---------------------------------------------------------------------------------
+  Header
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  */
+
+#header {
+	margin:0;
+	padding:5px 0 0 0;
+	width:950px;
+}
+
+#header img.logo{
+	font-size:0;
+	line-height:0;
+	margin:10px  0 0;
+	float:left;
+}
+
+/* Menu 
+--------------------------------------------  */
+
+#menu {
+	
+	float:right;
+	height:29px;
+	margin:0px 0 0 0;
+	padding:60px 0 0 0;
+	width:735px;
+}
+
+#menu ul, #menu li {
+	position:relative;
+	list-style:none;
+	display:inline;
+	float:left;
+	margin-right:4px;
+	overflow:hidden;
+}
+
+
+	#menu li.last{
+		margin-right:0px;
+	}
+
+	#home { position:relative; float:left; background:url("file:///C|/xampp/htdocs/w2c/wp-content/themes/images/menu.png") 0px -41px; width:142px; height:28px; }
+	#home:hover { background-position: 0px -82px;}
+	#home:active { background-position: 0px -82px;}
+	#home.selected {background-position: 0px -82px;}
+	
+	#about { position:relative; float:left; background:url("file:///C|/xampp/htdocs/w2c/wp-content/themes/images/menu.png") -146px -41px; width:142px; height:28px; }
+	#about:hover { background-position: -146px -82px; }
+	#about:active { background-position: -146px -82px; }
+	#about.selected {background-position: -146px -82px; }
+	
+	#projects { position:relative; float:left; background:url("file:///C|/xampp/htdocs/w2c/wp-content/themes/images/menu.png") -292px -41px; width:142px; height:28px;}
+	#projects:hover { background-position: -292px -82px; }
+	#projects:active { background-position: -292px -82px; }
+	#projects.selected {background-position: -292px -82px; }
+	
+	#clients { float:left; background:url("file:///C|/xampp/htdocs/w2c/wp-content/themes/images/menu.png") -438px -41px; width:142px; height:28px; }
+	#clients:hover { background-position: -438px -82px; }
+	#clients:active { background-position: -438px -82px; }
+	#clients.selected { background-position: -438px -82px; }
+	
+	#contact { float:left; background:url("file:///C|/xampp/htdocs/w2c/wp-content/themes/images/menu.png") -584px -41px; width:144px; height:28px;  }
+	#contact:hover { background-position: -584px -82px; }
+	#contact:active { background-position: -584px -82px; }
+	#contact.selected { background-position:  -584px -82px; }
+	
+
+
+
+/*---------------------------------------------------------------------------------
+  Layout
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  */
+
+#bg_container {
+	background-image:url(file:///C|/xampp/htdocs/w2c/wp-content/themes/w2c/bg_top.png);
+	background-position:top;
+	background-repeat:repeat-x;
+	min-height:630px;
+	width:100%;
+}
+
+#container {
+	margin:0 auto;
+	width:960px;
+}
+
+#content {
+	background-color:#fff;
+	display:inline;
+	float:left;
+	padding:5px 0 10px;
+	width:950px;
+}
+
+	.left-col{
+		float:left;
+		margin:0px 0px 0px 30px;
+		width:430px;
+	}
+	
+	.right-col{
+		float:left;
+		width:430px;
+		margin:0px 0px 0px 30px;
+	}
+
+
+
+
+
+
+
+
+/* busy cursor */
+div.blockOverlay {
+	backgroundColor: '#fff' 
+}
+
+
+.busy{
+	border: 'none', 
+	padding: '15px', 
+	backgroundColor: '#000', 
+	'-webkit-border-radius': '10px', 
+	'-moz-border-radius': '10px', 
+	opacity: .5, 
+	color: '#fff' 
+}
+
+
+
+
+
+
+#content_sub {
+	background-color:#fff;
+	display:inline;
+	float:left;
+	padding:25px 30px 35px;
+	width:890px;
+}
+
+#content_left {
+	display:inline;
+	float:left;
+	margin:0 30px 0 0;
+	width:430px;
+}
+
+#content_right {
+	display:inline;
+	float:left;
+	width:430px;
+}
+
+#content_left p,#content_right p {
+	height:30px;
+	margin-top:15px;
+}
+
+span.edit {
+	border-top:1px solid #CCC;
+	display:inline;
+	float:left;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	margin-top:30px;
+	padding-top:5px;
+	width:660px;
+}
+
+span.edit a {
+	color:#666;
+}
+
+span.edit a:hover,p.edit a:active {
+	color:#067e8c;
+}
+
+#tophr {
+	border:none;
+	clear:both;
+	height:11px;
+	margin:0;
+	padding:0;
+	position:relative;
+	width:950px;
+}
+
+#menuBox { width:100%; margin:0 0 2px 0; }
+
+#menuhr {
+	float:left;
+	border:none;
+	padding: 0 0 0 17px;
+	height:6px;
+	margin:-1px 0 0 0;
+	width:727px;
+}
+
+
+#midhr {
+	border:none;
+	display:inline;
+	float:left;
+	height:25px;
+	margin:0;
+	padding:0;
+	width:950px;
+}
+
+
+
+.arrow {
+	font-family:Geneva, Arial, Verdana, sans-serif;
+	margin-left:15px;
+}
+
+.arrow_l {
+	font-family:Geneva, Arial, Verdana, sans-serif;
+	margin-right:15px;
+}
+
+.viewfullportfolio {
+	color:gray;
+	font-size:11px;
+	font-weight:normal;
+	margin:0 0 0 30px;
+}
+
+
+/*---------------------------------------------------------------------------------
+  Footer
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  */
+
+#content_bottom {
+	background-color:#fff;
+	height:160px;
+	padding:20px 30px 0;
+	width:890px;
+}
+
+#hr_bottom {
+	height:8px;
+	width:950px;
+}
+
+#footer {
+	color:#fff;
+	font-family:Arial, Verdana, sans-serif;
+	font-size:10px;
+	line-height:16px;
+	margin:5px 0 50px;
+	padding:5px 0 0;
+	text-align:center;
+}
+
+#footer a {
+	color:#605743;
+}
+
+#footer a:hover, #footer a:active {
+	color:#f2c362;
+	text-decoration:none;
+}
+
+.footer_address {
+	float:left;
+}
+
+.footer_copyright {
+	float:right;
+	color:#3c321d;
+}
+
+
+
+/* Hire Me
+--------------------------------------------  */
+
+#contact_us {
+	display:inline;
+	float:left;
+	height:120px;
+	margin:0 30px 0 0;
+	padding:0;
+	width:200px;
+}
+
+#contact_us p {
+	margin:10px 0 10px;
+}
+
+/* Latest Blog Posts
+--------------------------------------------  */
+
+#latest_blog_posts {
+	display:inline;
+	float:left;
+	height:120px;
+	margin-right:25px;
+	width:415px;
+}
+
+#latest_blog_list {
+	border-bottom:1px solid #dcdcdc;
+	list-style:none;
+	margin:15px 0 0;
+	padding:0;
+	width:415px;
+}
+
+#latest_blog_list li {
+	border-top:1px solid #dcdcdc;
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+
+.latest_blog_post a {
+	color:#4c4c4c;
+	display:block;
+	font-size:11px;
+	margin:0;
+	padding:4px 10px 4px 0;
+	text-decoration:none;
+}
+
+.latest_blog_post a:hover,.latest_blog_post a:active {
+	background-color:#eefafb;
+	outline:none;
+}
+
+html>body .latest_blog_post a {
+	width:auto;
+}
+
+.latest_blog_date {
+	color:#648d92;
+	float:left;
+	width:70px;
+}
+
+.latest_blog_entrytitle {
+	font-weight:bold;
+}
+
+.latest_blog_comments {
+	color:#9c9c9c;
+	margin:0 0 0 15px;
+}
+
+/* Newsletter Signup
+--------------------------------------------  */
+
+#newsletter {
+	display:inline;
+	float:left;
+	width:215px;
+}
+
+#newsletter p {
+	margin:10px 0 20px;
+}
+
+#newsletter form {
+	margin:0 5px 0 0;
+}
+
+#newsletter input {
+	width:140px;
+	font:12px Arial;
+	margin:0;
+	border:1px solid #ccc;
+	color:#666;
+	padding:4px 5px;
+}
+
+
+/*---------------------------------------------------------------------------------
+  Home
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  */
+
+#banner {
+	background-color:#fff;
+	border:none;
+	display:inline;
+	float:left;
+	height:213px;
+	margin:0;
+	padding:0;
+	width:950px;
+}
+
+#introtext {
+	display:inline;
+	float:left;
+	margin:25px 30px;
+	padding:0;
+	width:350px;
+}
+
+	#introtext p {
+		margin:0px 0px 25px 10px;
+		font-size:12px;
+		line-height: 16px;	
+	}
+
+
+
+/* 
+* Recent Work
+*/
+#latestwork{
+	display:inline;
+	float:left;
+	margin:25px 0 15px 10px;
+	padding:0 0 0 50px;
+	width:480px;
+}
+	.latest {
+		color:#8e8e8e;
+		display:inline;
+		float:left;
+		margin:0 20px 0 0;
+		width:200px;
+	}
+
+	.latest > div{
+		margin-top:10px;
+	}
+	 
+	.latest > p{
+		margin-top:10px; 	
+	}
+	 
+	 
+	 p.title{
+	 	font-size:14px;
+		font-weight:bold;
+		color:#067e8c;
+		text-align:left;
+	 }
+	 
+	 p.category{
+	 	font-size:12px;
+		margin-top:4px;
+	 }
+	
+	 p.description{
+	 	margin-top:10px;
+	 }
+
+
+/*---------------------------------------------------------------------------------
+  About
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  */
+
+#aboutbanner {
+	background-color:#fff;
+	background-image:url(file:///C|/xampp/htdocs/w2c/wp-content/themes/w2c/aboutus_banner.jpg);
+	border:none;
+	display:inline;
+	float:left;
+	height:213px;
+	margin:0;
+	padding:0;
+	width:950px;
+}
+
+	ul.list{
+		margin-top:10px;
+		margin-left:20px;
+	}
+	
+#servicesbanner {
+	background-color:#fff;
+	background-image:url(file:///C|/xampp/htdocs/w2c/wp-content/themes/w2c/ourservices_banner.jpg);
+	border:none;
+	display:inline;
+	float:left;
+	height:213px;
+	margin:0;
+	padding:0;
+	width:950px;
+}
+
+
+/*---------------------------------------------------------------------------------
+  Portfolio - list
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  */
+
+
+#portfolio_content{
+	display:inline;
+	float:left;
+	padding:20px 0 22px 10px;
+	width:900px;
+}
+	
+	#portfolio_list {
+		display:inline;
+		list-style:none;
+		margin:0;
+		padding:0;
+	}
+	
+		#portfolio_list li {
+			color:#8e8e8e;
+			display:block;
+			float:left;
+			font-family:Arial, Helvetica, sans-serif;
+			font-size:11px;
+			min-height:200px;
+			list-style-type:none;
+			margin:0 22px 40px 0;
+			clear:both;
+		}
+			
+			.portfolio_thumb{
+				float:left;
+				width:200px;
+				height:200px;
+				text-align:center;
+				background:#ccc;
+				border:1px solid #067e8c;	
+				vertical-align:middle;	
+			}
+			
+			.portfolio_thumb:hover{
+				border:1px solid #ff6505;
+			}
+			
+				a.imgAnchor{
+					
+				}
+				
+					.portfolio_img {
+						display:block;
+						float:left;
+					}
+					
+		
+			div.portfolio_details{
+				float:left;
+				width:440px;
+				margin-left:20px;
+				clear:right;
+			}		
+				
+				div.portfolio_details p.title{
+					background-color:#ff6505;
+					margin-top:0px;
+					padding:6px;
+				}
+					div.portfolio_details p.title a{
+						color:#FFFFFF;
+					}
+					
+
+#portfolio_introtext {
+	color:#353a3d;
+	display:inline;
+	float:left;
+	margin:20px 0 22px 0;
+	width:180px;
+}
+
+	
+/*---------------------------------------------------------------------------------
+  Portfolio - view
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  */
+
+#portfolio_view_content{
+	display:inline;
+	float:left;
+	padding:20px 0 22px 10px;
+	width:650px;
+}
+	#portfolio_view_content p.description{
+		margin-right:20px;
+	}
+	
+	#imageBox{
+		width:630px;
+		margin-top:20px;
+	}
+		.imageContainer{
+			width:630px;
+			text-align:center;
+			background:#ccc;
+		}
+	
+	#portfolio_view_content .caption{
+		margin-right:20px;
+		margin-top:20px;
+		text-align:center;
+	}
+	
+		table.projectDescription{
+			margin-top:20px;
+		}
+		
+		table.projectDescription td{
+			padding:4px;
+		}
+				
+			td.fieldName{
+				width:160px;
+				color:#ff6505;
+				font-weight:bold;
+			}
+	
+
+#imageThumbSelector {
+	color:#353a3d;
+	display:inline;
+	float:left;
+	margin:20px 0 22px 0;
+	width:220px;
+}
+
+	#thumbList{
+		margin-top:10px;
+		width:630px;
+		background:red;
+	}
+		#thumbList li{		
+			display:block;
+			height:200px;
+			width:200px;
+			float:left;
+			list-style:none;
+			margin-left:4px;
+			margin-right:4px;
+			margin-top:10px;
+		}
+		
+		
+		
+
+#projectShortCut{
+	list-style:decimal;
+	margin-left:20px;
+}
+
+	#projectShortCut li{
+		margin-top:10px;
+		font-weight:bold;
+		width:220px;
+	}
+	
+		#projectShortCut li.selected a{
+			color:#ff6505;
+		}
+/*---------------------------------------------------------------------------------
+  Partners
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  */
+
+#partners_left_content{
+	width:600px;
+}	
+
+	#parnerts_list {
+		margin:30px 0px 0px 30px;
+		padding:0;
+	}
+	
+	#parnerts_list li {
+		font-family:Arial, Helvetica, sans-serif;
+		font-size:11px;
+		margin:0 22px 40px 0;
+		width:600px;
+		clear:both;
+		height:auto;
+		overflow:auto;
+	}
+		
+		.partnerPhotoBox{
+			float:left;
+			margin-right:30px;
+		}
+			.partner_img{
+				width:100px;
+				height:100px;
+			}
+		
+		.partnerDetailBox{
+			float:left;
+			width:300px;
+		}
+		
+			h3.partner-name{
+				width:100%;
+				display:block;
+				font-weight:bold;
+				clear:both;
+			}
+			.partner-position{
+				width:100%;
+				display:block;
+				clear:both;
+				font-size:16px;
+				font-style:italic;
+				font-weight:bold;
+			}
+			.partner-description{
+				width:100%;
+				display:block;
+				clear:both;
+				color:#8e8e8e;
+				font-size:14px;
+				margin-top:20px;
+				
+			}
+
+#partners_right_content{
+	width:180px;
+}
+
+/*---------------------------------------------------------------------------------
+  Clients
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  */
+#clientsPanel{
+	with:600px;
+}			
+
+#clientList{
+	margin-top:10px;
+	list-style:none;
+	width:900px;
+	background:green;
+	height:auto;
+	display:block;
+}
+	
+	#clientList li{
+		width:200px;
+		height:auto;
+		float:left;
+		margin-left:10px;
+		margin-right:10px;
+		text-align:center;
+		display:inline;
+	}
+	
+			div.client_thumb{
+				width:200px;
+				height:200px;
+				clear:both;
+			}
+			#clientList li p{
+				width:200px;
+				height:50px;
+				clear:both;
+			}
+		
