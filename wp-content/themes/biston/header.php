@@ -21,7 +21,7 @@
 		 <div id="menu">
          	<?php include_once(dirname(__FILE__)."/ext/mainmenus.php");?>
          </div>
-        <div><img src="images/menu_hr.png" alt="" id="menuhr" /></div>
+        <div><?php echo "<img src='".get_bloginfo("template_directory")."/images/menu_hr.png' alt='' id='menuhr' />" ?></div>
     </div>
 	<!-- start container -->
 
