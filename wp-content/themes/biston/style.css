@@ -139,35 +139,17 @@ img.autoSizeImage{
 	#menu li.last{
 		margin-right:0px;
 	}
-
-	#menu ul li a { position:relative; float:left; background:url("images/menu.png") 0px -41px; width:142px; height:28px; }
-	#menu ul li a:hover { background-position: 0px -82px;}
-	#menu ul li a:active { background-position: 0px -82px;}
-	#menu ul li.current-menu-item{background-position: 0px -82px;}
 	
-	#about { position:relative; float:left; background:url("file:///C|/xampp/htdocs/w2c/wp-content/themes/images/menu.png") -146px -41px; width:142px; height:28px; }
-	#about:hover { background-position: -146px -82px; }
-	#about:active { background-position: -146px -82px; }
-	#about.selected {background-position: -146px -82px; }
+	#menu ul li { text-align:center; position:relative; float:left; background:url("images/menu.png") 0px -41px; width:142px; /*height:28px;*/  padding-top:6px; padding-bottom:6px;}
+	#menu ul li:hover { background-position: 0px -82px;}
+	#menu ul li:active { background-position: 0px -82px;}
+	#menu ul li.current-menu-item,#menu ul li.current-menu-item a{background-position: 0px -82px; color:#FF6505;}
 	
-	#projects { position:relative; float:left; background:url("file:///C|/xampp/htdocs/w2c/wp-content/themes/images/menu.png") -292px -41px; width:142px; height:28px;}
-	#projects:hover { background-position: -292px -82px; }
-	#projects:active { background-position: -292px -82px; }
-	#projects.selected {background-position: -292px -82px; }
+	#menu ul li a{ font-family:Arial, Helvetica, sans-serif; font-weight:bold; font-size:14px; float:left; width:100%; }
+	#menu ul li a:hover{ text-decoration:none;}
+	#menu ul li a:active{ color:#FF6505; }
 	
-	#clients { float:left; background:url("file:///C|/xampp/htdocs/w2c/wp-content/themes/images/menu.png") -438px -41px; width:142px; height:28px; }
-	#clients:hover { background-position: -438px -82px; }
-	#clients:active { background-position: -438px -82px; }
-	#clients.selected { background-position: -438px -82px; }
 	
-	#contact { float:left; background:url("file:///C|/xampp/htdocs/w2c/wp-content/themes/images/menu.png") -584px -41px; width:144px; height:28px;  }
-	#contact:hover { background-position: -584px -82px; }
-	#contact:active { background-position: -584px -82px; }
-	#contact.selected { background-position:  -584px -82px; }
-	
-
-
-
 /*---------------------------------------------------------------------------------
   Layout
 -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  */
@@ -297,6 +279,8 @@ span.edit a:hover,p.edit a:active {
 	height:6px;
 	margin:-1px 0 0 0;
 	width:727px;
+	z-index:1;
+	position:relative;
 }
 
 
@@ -740,7 +724,7 @@ html>body .latest_blog_post a {
 		
 		
 
-#projectShortCut{
+#projectShortCut ul{
 	list-style:decimal;
 	margin-left:20px;
 }
@@ -751,7 +735,7 @@ html>body .latest_blog_post a {
 		width:220px;
 	}
 	
-		#projectShortCut li.selected a{
+		#projectShortCut li.selected a, .current_page_item a{
 			color:#ff6505;
 		}
 /*---------------------------------------------------------------------------------

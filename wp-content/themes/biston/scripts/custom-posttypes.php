@@ -30,13 +30,74 @@ function projects_register() {
 		'capability_type' => 'post',
 		'hierarchical' => false,
 		'menu_position' => null,
-		'supports' => array('title','editor')
+		'supports' => array('title','editor','thumbnail')
 	  ); 
  
 	register_post_type( 'projects' , $args );
 }
 
+
+
+add_action("admin_init", "admin_init");
  
+ 
+/*registering custom field */ 
+	function admin_init(){
+	  add_meta_box("credits_meta", "Design & Build Credits", "credits_meta", "projects", "normal", "low");
+}
+
+/* the custom field*/
+
+function credits_meta() {
+  global $post;
+  $custom = get_post_custom($post->ID);
+  $main_cont = $custom["main_cont"][0];
+  $client = $custom["client"][0];
+  $end_user = $custom["end_user"][0];
+  $consultant = $custom["consultant"][0];
+  $location = $custom["location"][0];
+  $scope_of_work = $custom["scope_of_work"][0];
+  $duration = $custom["duration"][0];
+  $status = $custom["status"][0];
+?>
+  <p><label>Main Contractor:</label><br />
+  <textarea cols="50" rows="5" name="main_cont"><?php echo $main_cont; ?></textarea></p>
+  <p><label>Client:</label><br />
+  <textarea cols="50" rows="5" name="client"><?php echo $client; ?></textarea></p>
+  <p><label>End User:</label><br />
+  <textarea cols="50" rows="5" name="end_user"><?php echo $end_user; ?></textarea></p>
+  <p><label>Consultant:</label><br />
+  <textarea cols="50" rows="5" name="consultant"><?php echo $consultant; ?></textarea></p>
+  <p><label>Location:</label><br />
+  <textarea cols="50" rows="5" name="location"><?php echo $location; ?></textarea></p>
+  <p><label>Scope of Work:</label><br />
+  <textarea cols="50" rows="5" name="scope_of_work"><?php echo $scope_of_work; ?></textarea></p>
+  <p><label>Duration:</label><br />
+  <textarea cols="50" rows="5" name="duration"><?php echo $duration; ?></textarea></p>
+  <p><label>Status:</label><br />
+  <textarea cols="50" rows="5" name="status"><?php echo $status; ?></textarea></p>
+<? }  ?>
+<?
+
+/**saving action for the metaboxes**/
+
+add_action('save_post', 'save_details');
+
+function save_details(){
+  global $post;
+ 
+  update_post_meta($post->ID, "main_cont", $_POST["main_cont"]);
+  update_post_meta($post->ID, "client", $_POST["client"]);
+  update_post_meta($post->ID, "end_user", $_POST["end_user"]);
+  update_post_meta($post->ID, "consultant", $_POST["consultant"]);
+  update_post_meta($post->ID, "location", $_POST["location"]);
+  update_post_meta($post->ID, "scope_of_work", $_POST["scope_of_work"]);
+  update_post_meta($post->ID, "duration", $_POST["duration"]);
+  update_post_meta($post->ID, "status", $_POST["status"]);
+}
+
+
+
 /*registering custom category box for this post type*/
 register_taxonomy("project_category", 
 				   array("projects"), 
@@ -76,6 +137,24 @@ function projects_custom_columns($column){
       break;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

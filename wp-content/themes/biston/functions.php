@@ -49,7 +49,8 @@ add_action('wp_enqueue_scripts', 'bootstrap_scripts_method');
 
 
 /**adding featured thumbnail for the theme post and custom post typess**/
-add_theme_support( 'post-thumbnails', array('post','slider','page') ); 
+add_theme_support( 'post-thumbnails', array('post','projects','clients','page') ); 
+add_image_size( 'mycustomsize', 200, 200, true );
 
 function custom_excerpt_length( $length ) {
 	return 20;

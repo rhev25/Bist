@@ -23,19 +23,28 @@
             <!-- start latest work -->
             <div id="latestwork">
               <h3>Featured Projects</h3>
-              <?php foreach($featuredProjects as $key=>$featured): ?>
+              <?php   query_posts( array( 'post_type' => 'projects', 'project_category' => 'featured', 'posts_per_page' => 4 ) );
+						  if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
               <div class="latest">
                 <div class="portfolio_thumb">
-                    <a href="<?php echo site_url('projects/'.$featured['id']); ?>" title=" " class="imgAnchor">
-                        <img src="projectphotos/thumbs/<?php echo $featured['filename']; ?>" class="autoSizeImage" />
+                    <a href="<?php the_permalink(); ?>" title=" " class="imgAnchor">
+                        <?php
+				 $image_id = get_post_thumbnail_id(); 
+				 $image_url = wp_get_attachment_image_src($image_id,$size); ?>
+				 <img src="<?php bloginfo('template_directory'); ?>/scripts/timthumb.php?src=<?php echo $image_url[0]; ?>" alt="<?php the_title(); ?>" />
                     </a>
                 </div>
                 <div class="clear"></div>
-                <p class="title"><a href="<?php echo site_url("projects/".$featured['id']); ?>"><?php echo $featured['name']; ?></a></p>
-                <p class="category"><?php echo $featured['scope']; ?></p>
-				<p class="description"><a href="" class="readMore">Read more..</a></p>
+                <p class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
+                <p class="category"><?php $scope_of_work = get_post_meta($post->ID, 'scope_of_work', true); // Get Scope of Work ?>
+					<?php
+                        if($scope_of_work != '') {
+						echo  $scope_of_work;
+						} 
+                    ?></p>
+				<p class="description"><a href="<?php the_permalink(); ?>" class="readMore">Read more..</a></p>
               </div>
-              <?php endforeach; ?>
+              <?php endwhile; endif; ?>
             </div>
             <!-- end latest work -->
          
